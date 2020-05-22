@@ -53,7 +53,7 @@ public class TabooSolver extends DescentSolver {
     @Override
     public Result solve(Instance instance, long deadline) {
        //init
-        Solver solver = new mySolverGloutons("EST_LRPT") ;
+        Solver solver = new GreedySolver("EST_LRPT") ;
         Taboo taboo = new Taboo(instance.numTasks, instance.numJobs, instance.numTasks, 9) ;
         Result result = solver.solve(instance, deadline) ;
         ResourceOrder order = result.schedule.toResourceOrder() ;

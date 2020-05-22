@@ -110,7 +110,7 @@ public class DescentSolver implements Solver {
     @Override
     public Result solve(Instance instance, long deadline) {
         //init
-        Solver solver = new mySolverGloutons("EST_LRPT") ;
+        Solver solver = new GreedySolver("EST_LRPT") ;
         Result result = solver.solve(instance, deadline) ;
         ResourceOrder order = result.schedule.toResourceOrder() ;
         //System.out.println("init : " + order);
